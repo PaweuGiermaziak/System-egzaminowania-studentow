@@ -4,38 +4,38 @@ http://it.pwn.pl/Artykuly/Programowanie/Jak-budowac-User-Story-Scrum-i-nie-tylko
 zawsz cel
 
 1. 
-Jako student chcę mieć przyjazny interfejs graficzny, w celu przyjaznego i intuicyjnego korzystania ze skryptu oceniającego wiedzę.
+Jako student chcę mieć przyjazny interfejs graficzny oparty na kodzie html i css, w celu przyjaznego i intuicyjnego korzystania z skryptu oceniajacego wiedze.
 
 Projekt graficzny ma zawierać:
 - projekt strony logowania
-- projekt strony wyboru kolokwium/egzaminu
+- projekt strony wyboru kolokwium
 - projekt strony panel wyboru odpowiedzi
 - projekt strony informacji o wyniku
-- projekt strony panelu adminstartora
+- projekt strony panel adminstartora
 
 2.
-Jako student chce miec mozliwosc zalogowania sie na istniejšce konto w bazie SQL prowadzacego zajecia, mozliwosc wyboru interesujecego mnie kolokwium i rozpoczecie jego uzupełniania.
-
-Projekt strony internetowej na zawierac:
-- istnieje mozliwosc logowania sie na istejšce konta w bazie SQL
-- mozna wybrac dowolne dostepne kolokium 
-- mozna przejsc do strony przeznaczonej do uzupełniania testu
-
-3.
-Jako student chcę mieć możliwość wypełnienia kolokwium na stornie internetowej, ilość czasu na wypenienie testu musi byc ogarniczna. Po za konczeniu testu oczekuję na otrzymanie wyniku w postaci ułamka dziesiętnego. Jako administrator wymagam aby skrypt przesłał dane o wyniku na serwer.
+Jako student chcę mieć możliwość zalogowania sie na istniejące konto prowadzacego zajęcia, możliwosc wyboru interesujecego mnie kolokwium i rozpoczecie jego uzupełniania.
 
 Projekt strony internetowej na zawierać:
-- możliwość wypełnienia wygeneroanych przez skrypt pytań
-- wybór poprawnej odpowiedzi odbywa sie poprzez zaznaczenie jednej z 4 możliwych
-- skrypt obsługuje przewijanie kolejnych pytań
-- po zakończeniu egzaminu skrypt wyświetla uzyskany wynik w formie x.x/10
-- po zakończeniu dostępnego czasu skrypt wyświetla uzyskany wynik w formie x.x/10
-- w momencie wyświetlania skrypt zapisuje wynik egzaminu na serwerze
- 
-4.
-Jako administator wymagam dostepu do danych przechowywyanych na serwerze bazy SQL w spesób przystepny i zorganizowany oparty na koncepcji tabelki.
+- możliwosc logowania sie na istejące konta w bazie
+- można wybrac dowolne dostepne kolokium 
+- można przejść do strony przeznaczonej do uzupełniania testu
+
+3.
+Jako sdudent chcę mieć mozliwosc wypełnienia kolokwium na stornie internetowej, dozwolony czas na wypenienie testu musi byc ogarniczny. Po za konczeniu testu oczekuje otrzymania wyniku w postaci ułamka zwykłego. Jako administrator wymagam aby skrypt przesłał dane o wyniku na serwer.
 
 Projekt strony internetowej na zawierac:
-- mozliwosc zalogowania sie jako administrator
-- mozliwosc wybrania konkretnego zespołu (roku akademickiego)
+- mozliwosc wypełnienia wygeneroanych przez skrypt pytan
+- wybór poprawnej odpowiedzi odbywa sie przez zaznaczenie jednej z 4 mozliwych
+- skrypt obsłóguje przewinjanie kolejnyc pytan
+- po zakocznieniu egzaminu skrypt wyswietla uzyskany wynik w formie x.x/10
+- po zkonczeniu dostepnego czasu skrypt wyswietla uzyskany wynik w formie x.x/10
+- w momencie wyswietlania sktypt zapusje wynik egzaminu na serwerze
+ 
+4.
+Jako administator wymagam dostepu do danych przechowywanych na serwerze bazy w sposób przystępny i zorganizowany, oparty na koncepcji tabelki.
+
+Projekt strony internetowej na zawierać:
+- możliwość zalogowania sie jako administrator
+- możliwość wybrania konkretnego zespołu (roku akademickiego)
 - mozliosc wyswietlanie tabeli przedstawiajacej osiagniecia poszczególnych studentów
