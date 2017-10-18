@@ -1,0 +1,41 @@
+pendrajff dysk f
+http://it.pwn.pl/Artykuly/Programowanie/Jak-budowac-User-Story-Scrum-i-nie-tylko.-Teoria-i-praktyka-w-metodach-Agile
+
+zawsz cel
+
+1. 
+Jako student chcê mieæ przyjazny interfejs graficzny oparty na kodzie html i css, w celu przyjaznego i intuicyjnego korzystania z skryptu oceniajacego wiedze.
+
+Projekt graficzny ma zawieraæ:
+- projekt strony logowania
+- projekt strony wyboru kolokwium
+- projekt strony panel wyboru odpowiedzi
+- projekt strony informacji o wyniku
+- projekt strony panel adminstartora
+
+2.
+Jako student chce miec mozliwosc zalogowania sie na istniej¹ce konto w bazie SQL prowadzacego zajecia, mozliwosc wyboru interesujecego mnie kolokwium i rozpoczecie jego uzupe³niania.
+
+Projekt strony internetowej na zawierac:
+- istnieje mozliwosc logowania sie na istej¹ce konta w bazie SQL
+- mozna wybrac dowolne dostepne kolokium 
+- mozna przejsc do strony przeznaczonej do uzupe³niania testu
+
+3.
+Jako sdudent chcê mieæ mozliwosc wype³nienia kolokwium na stornie internetowej, dozwolony czas na wypenienie testu musi byc ogarniczny. Po za konczeniu testu oczekuje otrzymania wyniku w postaci u³amka zwyk³ego. Jako administrator wymagam aby skrypt przes³a³ dane o wyniku na serwer.
+
+Projekt strony internetowej na zawierac:
+- mozliwosc wype³nienia wygeneroanych przez skrypt pytan
+- wybór poprawnej odpowiedzi odbywa sie przez zaznaczenie jednej z 4 mozliwych
+- skrypt obs³óguje przewinjanie kolejnyc pytan
+- po zakocznieniu egzaminu skrypt wyswietla uzyskany wynik w formie x.x/10
+- po zkonczeniu dostepnego czasu skrypt wyswietla uzyskany wynik w formie x.x/10
+- w momencie wyswietlania sktypt zapusje wynik egzaminu na serwerze
+ 
+4.
+Jako administator wymagam dostepu do danych przechowywyanych na serwerze bazy SQL w spesób przystepny i zorganizowany oparty na koncepcji tabelki.
+
+Projekt strony internetowej na zawierac:
+- mozliwosc zalogowania sie jako administrator
+- mozliwosc wybrania konkretnego zespo³u (roku akademickiego)
+- mozliosc wyswietlanie tabeli przedstawiajacej osiagniecia poszczególnych studentów
