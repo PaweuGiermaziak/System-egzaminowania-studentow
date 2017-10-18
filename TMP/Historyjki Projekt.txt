@@ -4,38 +4,38 @@ http://it.pwn.pl/Artykuly/Programowanie/Jak-budowac-User-Story-Scrum-i-nie-tylko
 zawsz cel
 
 1. 
-Jako student chcÍ mieÊ przyjazny interfejs graficzny oparty na kodzie html i css, w celu przyjaznego i intuicyjnego korzystania z skryptu oceniajacego wiedze.
+Jako student chcƒô mieƒá przyjazny interfejs graficzny, w celu przyjaznego i intuicyjnego korzystania ze skryptu oceniajƒÖcego wiedzƒô.
 
-Projekt graficzny ma zawieraÊ:
+Projekt graficzny ma zawieraƒá:
 - projekt strony logowania
-- projekt strony wyboru kolokwium
+- projekt strony wyboru kolokwium/egzaminu
 - projekt strony panel wyboru odpowiedzi
 - projekt strony informacji o wyniku
-- projekt strony panel adminstartora
+- projekt strony panelu adminstartora
 
 2.
-Jako student chce miec mozliwosc zalogowania sie na istniejπce konto w bazie SQL prowadzacego zajecia, mozliwosc wyboru interesujecego mnie kolokwium i rozpoczecie jego uzupe≥niania.
+Jako student chce miec mozliwosc zalogowania sie na istniej≈°ce konto w bazie SQL prowadzacego zajecia, mozliwosc wyboru interesujecego mnie kolokwium i rozpoczecie jego uzupe≈Çniania.
 
 Projekt strony internetowej na zawierac:
-- istnieje mozliwosc logowania sie na istejπce konta w bazie SQL
+- istnieje mozliwosc logowania sie na istej≈°ce konta w bazie SQL
 - mozna wybrac dowolne dostepne kolokium 
-- mozna przejsc do strony przeznaczonej do uzupe≥niania testu
+- mozna przejsc do strony przeznaczonej do uzupe≈Çniania testu
 
 3.
-Jako sdudent chcÍ mieÊ mozliwosc wype≥nienia kolokwium na stornie internetowej, dozwolony czas na wypenienie testu musi byc ogarniczny. Po za konczeniu testu oczekuje otrzymania wyniku w postaci u≥amka zwyk≥ego. Jako administrator wymagam aby skrypt przes≥a≥ dane o wyniku na serwer.
+Jako student chcƒô mieƒá mo≈ºliwo≈õƒá wype≈Çnienia kolokwium na stornie internetowej, ilo≈õƒá czasu na wypenienie testu musi byc ogarniczna. Po za konczeniu testu oczekujƒô na otrzymanie wyniku w postaci u≈Çamka dziesiƒôtnego. Jako administrator wymagam aby skrypt przes≈Ça≈Ç dane o wyniku na serwer.
 
-Projekt strony internetowej na zawierac:
-- mozliwosc wype≥nienia wygeneroanych przez skrypt pytan
-- wybÛr poprawnej odpowiedzi odbywa sie przez zaznaczenie jednej z 4 mozliwych
-- skrypt obs≥Ûguje przewinjanie kolejnyc pytan
-- po zakocznieniu egzaminu skrypt wyswietla uzyskany wynik w formie x.x/10
-- po zkonczeniu dostepnego czasu skrypt wyswietla uzyskany wynik w formie x.x/10
-- w momencie wyswietlania sktypt zapusje wynik egzaminu na serwerze
+Projekt strony internetowej na zawieraƒá:
+- mo≈ºliwo≈õƒá wype≈Çnienia wygeneroanych przez skrypt pyta≈Ñ
+- wyb√≥r poprawnej odpowiedzi odbywa sie poprzez zaznaczenie jednej z 4 mo≈ºliwych
+- skrypt obs≈Çuguje przewijanie kolejnych pyta≈Ñ
+- po zako≈Ñczeniu egzaminu skrypt wy≈õwietla uzyskany wynik w formie x.x/10
+- po zako≈Ñczeniu dostƒôpnego czasu skrypt wy≈õwietla uzyskany wynik w formie x.x/10
+- w momencie wy≈õwietlania skrypt zapisuje wynik egzaminu na serwerze
  
 4.
-Jako administator wymagam dostepu do danych przechowywyanych na serwerze bazy SQL w spesÛb przystepny i zorganizowany oparty na koncepcji tabelki.
+Jako administator wymagam dostepu do danych przechowywyanych na serwerze bazy SQL w spes√≥b przystepny i zorganizowany oparty na koncepcji tabelki.
 
 Projekt strony internetowej na zawierac:
 - mozliwosc zalogowania sie jako administrator
-- mozliwosc wybrania konkretnego zespo≥u (roku akademickiego)
-- mozliosc wyswietlanie tabeli przedstawiajacej osiagniecia poszczegÛlnych studentÛw
+- mozliwosc wybrania konkretnego zespo≈Çu (roku akademickiego)
+- mozliosc wyswietlanie tabeli przedstawiajacej osiagniecia poszczeg√≥lnych student√≥w
