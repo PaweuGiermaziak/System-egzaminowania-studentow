@@ -1,8 +1,3 @@
-pendrajff dysk f
-http://it.pwn.pl/Artykuly/Programowanie/Jak-budowac-User-Story-Scrum-i-nie-tylko.-Teoria-i-praktyka-w-metodach-Agile
-
-zawsz cel
-
 1. 
 Jako student chcę mieć przyjazny interfejs graficzny, w celu przyjaznego i intuicyjnego korzystania ze skryptu oceniającego wiedzę.
 
