@@ -1,0 +1,139 @@
+#content{
+padding: 95px 15px 35px 15px;
+	
+}
+
+#sideMenu{
+    width: 30%;
+    float: left;
+    border: 2px solid #99bf99;
+    margin-top: 15px;
+    padding: 10px;
+	    text-align: center;
+
+}
+
+#sideMenu > h2{
+    padding: 0;
+    margin: 10px 0;
+    font-size: 1.9em;
+    color: #525252;
+    font-family: 'PT Sans', sans-serif;
+}
+
+#sideMenuTable{
+width: 85%;
+    text-align: left;
+    margin: 0 auto;
+	cursor: default;
+}
+
+.sideMenuBtn{
+border: 1px solid #608261;
+margin-right: 3px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+	    text-align: center;
+    padding: 2px 0;
+	    margin-bottom: 7px;
+cursor: pointer;
+}
+
+.sideMenuBtn:hover{
+background-color: #d5e4d5; 
+}
+
+.sideMenuBtn > p{
+    margin: 0;
+    display: inline;
+    color: #383838;
+    font-size: 0.92em;
+    font-family: 'PT Sans', sans-serif;
+}
+
+#sideMenuBtnActv{
+background-color: #9bd89b;;
+}
+
+#sideMenuBtnActv > p{
+color: white;
+}
+
+#sideMenuBtnClose{
+    border: 2px solid #42962d;
+    background-color: #7bbb73;
+    color: white;
+    margin: 15px auto 10px auto;
+    width: 125px;
+    padding: 2px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#sideMenuBtnClose:hover{
+background-color: #74d074; 
+}
+
+#sideMenuBtnClose > p{
+    margin: 0;
+    font-size: 0.95em;
+    font-family: 'PT Sans', sans-serif;
+}
+
+#output{
+    width: 69%;
+    float: right;
+    border: 2px solid #eaeaea;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #fbfbfb;
+
+}
+
+#output > h2{
+    padding: 0;
+     margin: 10px 0 13px 0;
+    font-size: 1em;
+    color: #525252;
+    font-family: 'PT Sans', sans-serif;
+}
+
+#output > form > p{
+padding: 0;
+    margin: 5px 0;
+    font-size: 0.966em;
+    color: #525252;
+    font-family: 'PT Sans', sans-serif;
+    display: block;
+}
+
+#outputNext{
+width: 160px;
+ border: 2px solid #42962d;
+    background-color: #7bbb73;
+    color: white;
+    margin: 0 0 0 auto;
+    padding: 6px;
+    text-align: center;
+	cursor: pointer;
+}
+
+#outputNext:hover{
+background-color: #74d074; 
+}
+
+#outputNext > p{
+margin: 0;
+font-size: 0.95em;
+font-family: 'PT Sans', sans-serif;
+}
+
+
+
+
+
+
+
+
+
