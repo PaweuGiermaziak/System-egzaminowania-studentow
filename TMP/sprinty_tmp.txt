@@ -1,0 +1,11 @@
+stworzenie skrytpu logowania
+stworzenie skryptu generowania listy kolokwiów
+stworzenie skryptu inicjuj¹cego kolokwium
+stworzenie generatora pytañ
+stworzenie skryptu obs³uguj¹cego proces zadawania pytañ
+stworzenie zabezpieczeñ obs³ugi procesu zadawania pytañ
+stworzenie skryptu oceniaj¹cego
+stworzenie skryptu zapisuj¹cego odpwiedzi na serwerze
+stworzenie obs³ugi bazy z pozycji profesora/administratora
+stworzenie skryptu obs³uguj¹cego administracje kontami studentów
+stworzenie skryptu wyœwietlaj¹cego odpowiedzi z dowolnego przebytego kolokwium
