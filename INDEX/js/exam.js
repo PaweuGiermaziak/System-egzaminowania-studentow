@@ -1,5 +1,5 @@
-//var curTime = 2700;
-var curTime = 5;
+var curTime = 2700;
+//var curTime = 5;
 
 $(document).ready(function(){  
 
