@@ -181,7 +181,7 @@ Jako wykładowca wymagam możliwości dodawania kont sudentów, tak abym mógł 
 
 \subsection{Backlog Item 4}
 \paragraph{Tytuł zadania.} Weryfikacja.
-\paragraph{Opis zadania.} Zweryfikowanie wprowadzonych danych podczas rejestracji.
+\paragraph{Opis zadania.} Zweryfikowanie wprowadzonych danych podczas logowania.
 \paragraph{Priorytet.} Średni.
 \paragraph{Definition of Done.} Sprawdzenie, czy podane zostały wszystkie wymagane dane, czy posiadają odpowiedni format oraz czy liczba wprowadzonych znaków mieści się w ustalonym przedziale. Jeśli nie został spełniony któryś z warunków zostanie wyświetlony komunikat.
 
@@ -281,33 +281,41 @@ Demonstracja została przeprowadzona dnia: 2017-11-22
 
 \paragraph{Tytuł zadania.} Serwer
 \subparagraph{Wykonawca.} Kamil Orzechowski
-\subparagraph{Realizacja.} Sprawozdanie z realizacji zadania (w tym ocena zgodności z estymatą). Kod programu (środowisko \texttt{verbatim}): \begin{verbatim}
-for (i=1; i<10; i++)
-...
-\end{verbatim}.
+\subparagraph{Realizacja.} Został założony lokalny serwer, wraz z usługami php i sql. Serwer korzysta z programu WAMPserver
 
 \paragraph{Tytuł zadania.} Logowanie
 \subparagraph{Wykonawca.} Paweł Tomasiak
-\subparagraph{Realizacja.} Sprawozdanie z realizacji zadania (w tym ocena zgodności z estymatą). Kod programu (środowisko \texttt{verbatim}): \begin{verbatim}
-for (i=1; i<10; i++)
-...
-\end{verbatim}.
+\subparagraph{Realizacja.} Projekt posiada działający system logowania dla użytkowników znajdujących się w bazie
 
 \paragraph{Tytuł zadania.} Weryfikacja
 \subparagraph{Wykonawca.} Paweł Tomasiak
-\subparagraph{Realizacja.} Sprawozdanie z realizacji zadania (w tym ocena zgodności z estymatą). Kod programu (środowisko \texttt{verbatim}): \begin{verbatim}
-for (i=1; i<10; i++)
-...
-\end{verbatim}.
+\subparagraph{Realizacja.} Skrypt na serwerze weryfikuje podane dane porównując je z wpisami z bazy sql
 
 
 \paragraph{Tytuł zadania.} Baza Danych
 \subparagraph{Wykonawca.} Przemysław Rysiewicz
-\subparagraph{Realizacja.} Sprawozdanie z realizacji zadania (w tym ocena zgodności z estymatą). Kod programu (środowisko \texttt{verbatim}): \begin{verbatim}
-for (i=1; i<10; i++)
-...
-\end{verbatim}.
+\subparagraph{Realizacja.} W bazie danych zostały utworzone tabele: kolokwia, users, dzialy, które posiadają następującą strukturę:
 
+CREATE TABLE IF NOT EXISTS `kolokwia` (
+  `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id_dzialy` int(11) NOT NULL,
+  `name` varchar(30) COLLATE cp1250_polish_ci NOT NULL,
+  PRIMARY KEY (`id`)
+)
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `user` varchar(25) COLLATE cp1250_polish_ci NOT NULL,
+  `password` varchar(25) COLLATE cp1250_polish_ci DEFAULT NULL,
+  `name` varchar(35) COLLATE cp1250_polish_ci NOT NULL,
+  PRIMARY KEY (`id`)
+)
+
+CREATE TABLE IF NOT EXISTS `dzialy` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) COLLATE cp1250_polish_ci NOT NULL,
+  PRIMARY KEY (`id`)
+)
 
 \subsection{Sprint Review/Demo}
 Sprawozdanie z przeglądu Sprint'u -- czy założony cel (przyrost) został osiągnięty oraz czy wszystkie zaplanowane Backlog Item'y zostały zrealizowane? Demostracja przyrostu produktu.
