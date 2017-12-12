@@ -296,13 +296,16 @@ Demonstracja została przeprowadzona dnia: 2017-11-22
 \subparagraph{Wykonawca.} Przemysław Rysiewicz
 \subparagraph{Realizacja.} W bazie danych zostały utworzone tabele: kolokwia, users, dzialy, które posiadają następującą strukturę:
 
+\begin{verbatim}
 CREATE TABLE IF NOT EXISTS `kolokwia` (
   `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
   `id_dzialy` int(11) NOT NULL,
   `name` varchar(30) COLLATE cp1250_polish_ci NOT NULL,
   PRIMARY KEY (`id`)
 )
-
+  \end{verbatim}
+  
+  \begin{verbatim}
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
   `user` varchar(25) COLLATE cp1250_polish_ci NOT NULL,
@@ -310,13 +313,16 @@ CREATE TABLE IF NOT EXISTS `users` (
   `name` varchar(35) COLLATE cp1250_polish_ci NOT NULL,
   PRIMARY KEY (`id`)
 )
+  \end{verbatim}
 
+  \begin{verbatim}
 CREATE TABLE IF NOT EXISTS `dzialy` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(30) COLLATE cp1250_polish_ci NOT NULL,
   PRIMARY KEY (`id`)
 )
-
+ \end{verbatim}
+ 
 \subsection{Sprint Review/Demo}
 Sprawozdanie z przeglądu Sprint'u -- czy założony cel (przyrost) został osiągnięty oraz czy wszystkie zaplanowane Backlog Item'y zostały zrealizowane? Demostracja przyrostu produktu.
 
