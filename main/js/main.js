@@ -5,6 +5,24 @@ function dirTree(vr){
 		document.getElementById("ul"+vr).style.display = "none";
 }
 
+function loadScreen(id){
+	
+	$.ajax({
+        type: "POST",
+        url: "php/loadScreen.php",
+        data: {
+            user: id,
+        },
+        success: function(msg) {
+				 document.getElementById("content").innerHTML = msg;				
+        },
+        error: function() {
+            console.log( "Ajax bład");
+        }
+    });
+	
+}
+
 function logout(id){
 	
 	$.ajax({
