@@ -1,10 +1,33 @@
 <?php 
+require('functions.php');
+
+if($_POST['id']==0){
+	
+	$lista = '';
+
+$bazaLynk = new mysqli('localhost', 'root', '', 'mazurprojekt') or die();
+mysqlcomm($bazaLynk, 'SET NAMES utf8;');
+
+$out = multi_mysqlselect($bazaLynk, 'select * from dzialy;');
+
+	for($i = 1; $row = mysqli_fetch_array($out); $i++){
+		$lista .=  '<li><span onclick="dirTree('.$i.')">'.$row['name'].'</span><ul id="ul'.$i.'">';
+			$outKolokwia = multi_mysqlselect($bazaLynk, 'select * from kolokwia where id_dzialy = "'.$row['id'].'";');
+
+				while($rowKolokwia = mysqli_fetch_array($outKolokwia)){
+					$lista .= '<li onclick="startButton('.$rowKolokwia['id'].', '.$rowKolokwia['id_dzialy'].')">'.$rowKolokwia['name'].'</li>';
+				}
+			$lista .= '</ul></li>';
+	}
+	
 echo '
 						<div id="directoryTree">
 							<div>	
 								<h1>menu</h1>
+							<ol id="dirList">
+								'.$lista
 								
-								<ol id="dirList">
+								/*
 									<li><span onclick="dirTree(\'1\')">Calki</span>
 										<ul id="ul1">
 											<li>Całe</li>
@@ -19,12 +42,14 @@ echo '
 											<li>Lubiu Placki</li>
 										</ul>
 									</li>
-								</ol>
+								*/
+								.'
+							</ol>
 								<div class="EndOFloat"></div>
 							</div>
 						</div>
 						<script>displayList(0)</script>
-
+						
 						<div id="infoAndBegin">
 							<h2>Lorem ipsum dolor sit amet!</h2>
 							<p>
@@ -39,13 +64,64 @@ echo '
 							<p>
 							Aenean lectus sapien, ultricies vitae bibendum porta, pellentesque quis ligula. Vivamus a augue felis. Nam molestie fringilla neque vitae sodales. Donec quis tincidunt elit. Integer et molestie lorem, at accumsan ex. Nullam turpis eros, pulvinar id condimentum et, rutrum at enim. Donec tempor laoreet sollicitudin. Sed mattis dapibus eros vulputate maximus. Suspendisse at gravida magna, a porttitor nunc. Phasellus in enim et leo interdum tempor in in erat. Pellentesque ultrices mollis magna et fermentum.
 							</p>
+							<div id="startBtnSlot"></div>
+							'.
 							
-							<div id="startButton">
+							
+							/*<div id="startButton">
 								<h4>Rozpocznij</h4>
 								<p id="startBtn"></p>
-							</div>
+							</div>*/
+							'
 						</div>
 						
 						<div class="EOF"></div>
 ';
+}
+
+if($_POST['id']==1){
+echo '				<div id="sideMenu">
+					<h2 id="userTimer">00:00</h2>
+					<div id="sideMenuTable">
+						<div class="sideMenuBtnActv" id="Tsk_1"><p>1</p></div>
+						<div class="sideMenuBtn" onclick="chngQuest(1);" id="Tsk_2"><p>2</p></div>
+						<div class="sideMenuBtn" onclick="chngQuest(2);" id="Tsk_3"><p>3</p></div>
+						<div class="sideMenuBtn" onclick="chngQuest(3);" id="Tsk_4"><p>1</p></div>
+						<div class="sideMenuBtn"><p>2</p></div>
+						<div class="sideMenuBtn"><p>3</p></div>
+						<div class="sideMenuBtn"><p>1</p></div>
+						<div class="sideMenuBtn"><p>2</p></div>
+						<div class="sideMenuBtn"><p>3</p></div>
+						<div class="sideMenuBtn"><p>22</p></div>
+						<div class="sideMenuBtn"><p>32</p></div>
+						<div class="sideMenuBtn"><p>11</p></div>
+						<div class="sideMenuBtn"><p>37</p></div>
+						<div class="sideMenuBtn"><p>25</p></div>
+						<div class="sideMenuBtn"><p>38</p></div>
+						<div class="sideMenuBtn"><p>52</p></div>
+						<div class="sideMenuBtn"><p>36</p></div>
+						<div class="sideMenuBtn"><p>52</p></div>
+						<div class="sideMenuBtn"><p>34</p></div>
+					</div>
+					
+					<div id="sideMenuBtnClose">
+						<p>Zakoncz test</p>
+					</div>
+					
+				</div>
+				<div id="output">
+					<h2 id="question">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec molestie est. Sed arcu arcu, scelerisque at turpis sit amet, porta sagittis ligula. Nunc tristique odio vel ligula rutrum maximus at a purus. Vestibulum tempus sem at sem fermentum bibendum. Nunc dignissim nisi dui?</h2>
+					<form>
+						<p><input type="radio" name="T1_a" value=""> Ut nec molestie est.</p>
+						<p><input type="radio" name="T1_a" value=""> Sed arcu arcu.</p>
+						<p><input type="radio" name="T1_a" value=""> Sporta sagittis ligula.</p>
+						<p><input type="radio" name="T1_a" value=""> Sporta sagittis amet.</p>
+					</form>
+					
+					<div id="outputNext">
+						<p>Następne pytanie</p>
+					</div>
+				</div>
+				<div class="EOF"></div>';
+}
 ?>

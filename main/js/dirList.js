@@ -26,7 +26,7 @@ function startButton(id, id_dzialy){
             id_dzialy: id_dzialy,
         },
         success: function(msg) {
-            document.getElementById("startBtn").innerHTML = msg;				
+            document.getElementById("startBtnSlot").innerHTML = msg;	
         },
         error: function() {
             console.log( "Ajax bład");

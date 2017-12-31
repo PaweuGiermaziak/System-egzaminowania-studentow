@@ -51,6 +51,7 @@ function displayPage($id, $err=''){
 				<meta charset="UTF-8">
 				<link rel="stylesheet" type="text/css" href="css/main.css">
 				<link rel="stylesheet" type="text/css" href="css/index.css">
+				
 					
 					
 				<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
@@ -115,10 +116,12 @@ function displayPage($id, $err=''){
 				<meta charset="UTF-8">
 				<link rel="stylesheet" type="text/css" href="css/main.css">
 				<link rel="stylesheet" type="text/css" href="css/examsList.css">
+				<link rel="stylesheet" type="text/css" href="css/qAndA.css">
 					
 				<script type="text/javascript" src="js/jquery.js"></script>
 				<script type="text/javascript" src="js/main.js"></script>
 				<script type="text/javascript" src="js/dirList.js"></script>
+				<script type="text/javascript" src="js/exam.js"></script>
 					
 				<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 			</head>
@@ -160,7 +163,7 @@ function displayPage($id, $err=''){
 							}
 							
 							if($_SESSION['pg']==1){
-								?><script>loadScreen(1)</script><?php
+								?><script>loadScreen(0)</script><?php
 							}
 						?>
 

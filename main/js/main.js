@@ -11,10 +11,12 @@ function loadScreen(id){
         type: "POST",
         url: "php/loadScreen.php",
         data: {
-            user: id,
+            id: id,
         },
         success: function(msg) {
-				 document.getElementById("content").innerHTML = msg;				
+				 document.getElementById("content").innerHTML = msg;
+					if(id==1)
+						clock();
         },
         error: function() {
             console.log( "Ajax bład");
