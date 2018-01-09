@@ -324,51 +324,44 @@ CREATE TABLE IF NOT EXISTS `dzialy` (
  \end{verbatim}
  
 \subsection{Sprint Review/Demo}
-Sprawozdanie z przeglądu Sprint'u -- czy założony cel (przyrost) został osiągnięty oraz czy wszystkie zaplanowane Backlog Item'y zostały zrealizowane? Demostracja przyrostu produktu.
+Sprint został zakończony powodzeniem, wszystkie załozone zadania zostały zrealizowane w ustalonym czasie. 
+W ramach sprintu utwożyliśmy bazę danych, która zawiera kilku dodanych "na sztywno" użytkowników(z możliwością dodawania kolejnych - formularz rejestracji z poziomu egzaminatora nie jest jeszcze dostępny), dzięki czemu możliwe jest zalogowanie się. Logowanie odbywa w utworzonym w poprzednim sprincie formularzu, który do tej pory pełnił jedynie funkcję poglądową. Została stworzona weryfikacja danych wprowadzanych podczas logowania, która weryfikuje czy w bazie danych, w tabeli "users" znajduje się rekord zawierający wartości 'user' oraz 'password' zgodne z tymi wprowadzonymi w formularzu. W przypadku kiedy użytkownik  poda poprawne dane nastąpi przejście na stronę główną egzaminatora. Wyświetlane na niej są imie i nazwisko zalogowanej osoby. Użytkownik ma możliwość wylogowania się po którym następuje powrót do wcześniej wspomnianego formularza. Na chwile obecną po wpisaniu błędnego loginu lub hasła nie wyświetla się żaden komunikat(zostanie to dodane w kolejnym sprincie)
 
 \section{Sprint 3}
 
-\subsection{Cel}  Lista egzaminów, panel konta użytkownika.
+\subsection{Cel}  Lista egzaminów oraz panel konta użytkownika.
 
 \subsection{Sprint Planning/Backlog}
 
-\paragraph{Tytuł zadania.} Tytuł.
+\paragraph{Tytuł zadania.} Lista egzaminów
 \begin{itemize}
-\item Estymata: szacowana czasochłonność (w ,,koszulkach'').
-\end{itemize}
+\item Estymata: M
+\end{itemize} 
 
-\paragraph{Tytuł zadania.} Tytuł.
+\paragraph{Tytuł zadania.} Panel konta użytkownika
 \begin{itemize}
-\item Estymata: szacowana czasochłonność (w ,,koszulkach'').
-\end{itemize}
+\item Estymata: L
+\end{itemize} 
 
-\paragraph{Tutaj dodawać kolejne zadania}
 
 \subsection{Realizacja}
 
-\paragraph{Tytuł zadania.} Tytuł.
+\paragraph{Tytuł zadania.}  Lista egzaminów
 \subparagraph{Wykonawca.} Wykonawca.
-\subparagraph{Realizacja.} Sprawozdanie z realizacji zadania (w tym ocena zgodności z estymatą). Kod programu (środowisko \texttt{verbatim}): \begin{verbatim}
-for (i=1; i<10; i++)
-...
-\end{verbatim}.
+\subparagraph{Realizacja.} Po zalogowaniu, w sekcji MENU, znajduje się lista egzaminów możliwych do rozpoczęcia. Po wybraniu jednego z listy możliwe jest rozpoczęcie egzaminu
 
-\paragraph{Tytuł zadania.} Tytuł.
+\paragraph{Tytuł zadania.} Panel konta użytkownika.
 \subparagraph{Wykonawca.} Wykonawca.
-\subparagraph{Realizacja.} Sprawozdanie z realizacji zadania (w tym ocena zgodności z estymatą). Kod programu (środowisko \texttt{verbatim}): \begin{verbatim}
-for (i=1; i<10; i++)
-...
-\end{verbatim}.
-
-\paragraph{Tutaj dodawać kolejne zadania}
+\subparagraph{Realizacja.} 
+ 
 
 
 \subsection{Sprint Review/Demo}
-Sprawozdanie z przeglądu Sprint'u -- czy założony cel (przyrost) został osiągnięty oraz czy wszystkie zaplanowane Backlog Item'y zostały zrealizowane? Demostracja przyrostu produktu.
+Udało nam się spełnić założenia sprintu
 
 \section{Sprint 4}
 
-\subsection{Cel} Przydzielanie egzaminów, zarządanie studentami, rejestracja.
+\subsection{Cel} Przydzielanie egzaminów, zarządanie studentami, rejestracja. 
 
 \subsection{Sprint Planning/Backlog}
 
