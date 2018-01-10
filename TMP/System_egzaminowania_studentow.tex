@@ -1,0 +1,418 @@
+\documentclass[a4paper]{article}
+\usepackage{polski}
+\usepackage[cp1250]{inputenc}
+\usepackage{url}
+
+\title{\bf{System egzaminowania studentów}}
+\author{{\em Paweł Tomasiak, Kamil Orzechowski, Przemek Rysiewicz}}
+\date{}
+
+\begin{document}
+
+\begin{titlepage}
+\maketitle
+\thispagestyle{empty}
+\bigskip
+\begin{center}
+Zespołowe przedsięwzięcie inżynierskie\\[2mm]
+
+Informatyka\\[2mm]
+
+Rok. akad. 2017/2018, sem. I\\[2mm]
+
+Prowadzący: dr hab. Marcin Mazur
+\end{center}
+\end{titlepage}
+
+\tableofcontents
+\thispagestyle{empty}
+
+\newpage
+
+\section{Opis projektu}
+
+\subsection{Członkowie zespołu}
+
+\begin{enumerate}
+\item Paweł Tomasiak (kierownik projektu)
+\item Przemysław Rysiewicz
+\item Kamil Orzechowski
+\end{enumerate}
+
+\subsection{Cel projektu (produkt)}
+
+Celem projektu jest stworzenie platformy ułatwiającej osobie prowadzącej zadania dydaktyczne egzaminowanie studentów. Platforma ma w założeniu być substytutem testu wiedzy z pełną automatyzacją obsługi oceniania.
+
+\subsection{Potencjalny odbiorca produktu (klient)}
+
+Odbiorcą produktu jest osoba prowadzaca zadania dydaktyczne wymagajace oceniania wiedzy osób nauczanch. Do tej grupy zalicza sie nauczycieli i wykładowców.
+
+\subsection{Metodyka}
+
+Projekt będzie realizowany przy użyciu (zaadaptowanej do istniejących warunków) metodyki {\em Scrum}. 
+
+\section{Wymagania użytkownika}
+\subsection{User story 1}
+
+Jako użytkownik chcę aby interfejs graficzny był przejrzysty tak abym mógł intuicyjnie poruszać się po stronie
+
+\subsection{User story 2}
+
+Jako użytkownik chcę mieć łatwy dostęp do interesującego mnie kolokwium żeby od razu móc przystąpić do testu
+
+\subsection{User story 3}
+
+Jako użytkownik chcę widzieć wynik jaki osiągnąłem podczas egzaminu aby móc śledzić swoje postępy
+
+\subsection{User story 4}
+
+Jako użytkownik chcę mieć możliwość logowania sie na istniejące konta w bazie, żeby w każdej chwili mieć dostęp do testów
+
+\subsection{User story 5}
+
+Jako użytkownik chcę mieć możliwość wybrania konkretnego zespołu (roku akademickiego), żeby widzieć tylko dotyczące mnie egzaminy
+
+\subsection{User story 6}
+
+Jako administrator chcę aby skrypt przesłał dane o rezultacie testu na serwer tak abym mógł obejrzeć wyniki każdego użytkownika
+
+\subsection{User story 7}
+
+Jako administrator chcę aby skrypt generował pyrania z puli, po to żeby umożliwić dobór różnych pytań dla każdego studenta
+
+\subsection{User story 8}
+
+Jako administrator chcę aby wybór poprawnej odpowiedzi mógł odbywać się poprzez zaznaczenie więcej niż jednej z kilku możliwych, abym miał więcej możliwości w tworzeniu pytań
+
+\subsection{User story 9}
+
+Jako administrator chcę żeby ilość czasu na wypenienie testu była ograniczona, żeby egzamin nie trwał dłużej jest niż to konieczne
+
+\subsection{User story 10}
+
+Jako administrator chcę aby po zakończeniu dostępnego czasu skrypt wyświetlał uzyskany wynik, żeby każdy dysponował taką samą ilością czasu
+
+\subsection{User story 11}
+
+Jako administrator chcę aby skrypt zapisywał wynik otrzymany przez studenta na serwerze, tak abym miał do niego później dostęp
+
+\subsection{User story 12}
+
+Jako administrator wymagam dostepu do danych przechowywanych na serwerze bazy w sposób przystępny i zorganizowany, tak abym mógł łatwo przeglądać poszczególne wyniki
+
+\subsection{User story 13}
+
+Jako administrator chcę mieć możliwość dodawania pytań do bazy w celu swobodnego dostosowywania zadań egzaminu do aktualnych potrzeb
+
+\subsection{User story 14}
+
+Jako wykładowca wymagam możliwości dodawania kont sudentów, tak abym mógł bezpiecznie zarządzać ich ilością
+
+\section{Harmonogram}
+
+\subsection{Rejestr zadań (Product Backlog)}
+
+\begin{itemize}
+\item Data rozpoczęcia: 2017-10-18.
+\item  Data zakończenia: 2017-11-15.
+\end{itemize}
+
+
+\subsection{Sprint 1}
+
+\begin{itemize}
+\item Data rozpoczęcia: 2017-11-15.
+\item  Data zakończenia: 2017-11-22.
+\item Scrum Master: Kamil Orzechowski
+\item Product Owner: Przemysław Rysiewicz
+\item Development Team: Paweł Tomasiak, Przemysław Rysiewicz, Kamil Orzechowski.
+\end{itemize}
+
+\subsection{Sprint 2}
+
+\begin{itemize}
+\item Data rozpoczęcia: 2017-11-22.
+\item  Data zakończenia: 2017-12-13.
+\item Scrum Master: Kamil Orzechowski
+\item Product Owner: Przemysław Rysiewicz
+\item Development Team: Paweł Tomasiak, Przemysław Rysiewicz, Kamil Orzechowski.
+\end{itemize}
+
+\subsection{Sprint 3}
+
+\begin{itemize}
+\item Data rozpoczęcia: 2017-12-13.
+\item  Data zakończenia: 2018-01-10.
+\item Scrum Master: Paweł Tomasiak
+\item Product Owner: Kamil Orzechowski
+\item Development Team:
+\end{itemize}
+
+\subsection{Sprint 4}
+
+\begin{itemize}
+\item Data rozpoczęcia: 2018-01-10.
+\item  Data zakończenia: 2018-01-17.
+\item Scrum Master: Przemysław Rysiewicz
+\item Product Owner: Paweł Tomasiak
+\item Development Team:
+\end{itemize}
+
+
+\section{Product Backlog}
+
+\subsection{Backlog Item 1}
+\paragraph{Tytuł zadania.} Prototyp egzaminatora.
+\paragraph{Opis zadania.} Stworzenie działającego prototypu strony będącego w stanie egzaminować uczniów.
+\paragraph{Priorytet.} Wysoki.
+\paragraph{Definition of Done.} Prototyp zawiera podgląd strony, która posłuży do przeprowadzania egzaminu, podstrony: logowanie, lista egzaminów, zakończenie egzaminu oraz administrator.
+
+\subsection{Backlog Item 2}
+\paragraph{Tytuł zadania.} Baza danych.
+\paragraph{Opis zadania.} Stworzenie struktur bazodanowych w środowisku MySQL.
+\paragraph{Priorytet.} Wysoki.
+\paragraph{Definition of Done.} Stworzenie bazy danych posiadającej w tabelach wartości takie jak: id, nazwa użytkownika, hasło, email, oceny.
+
+\subsection{Backlog Item 3}
+\paragraph{Tytuł zadania.} Rejestracja.
+\paragraph{Opis zadania.} Możliwość utowrzenia nowego konta.
+\paragraph{Priorytet.} Średni.
+\paragraph{Definition of Done.} Stworzenie formularza umożliwiającego każdemu założenie nowego konta. Pomyślna rejestracja utworzy nowy rekord w bazie danych.
+
+\subsection{Backlog Item 4}
+\paragraph{Tytuł zadania.} Weryfikacja.
+\paragraph{Opis zadania.} Zweryfikowanie wprowadzonych danych podczas logowania.
+\paragraph{Priorytet.} Średni.
+\paragraph{Definition of Done.} Sprawdzenie, czy podane zostały wszystkie wymagane dane, czy posiadają odpowiedni format oraz czy liczba wprowadzonych znaków mieści się w ustalonym przedziale. Jeśli nie został spełniony któryś z warunków zostanie wyświetlony komunikat.
+
+\subsection{Backlog Item 5}
+\paragraph{Tytuł zadania.} Logowanie.
+\paragraph{Opis zadania.} Umożliwienie zalogowania na istniejące konto.
+\paragraph{Priorytet.} Wysoki.
+\paragraph{Definition of Done.} Formularz logowania umożliwiający rozpoczęcie nowej sesji oraz dostęp do przeznaczonych dla niego egzaminów. Zalogowanie nastąpi jeśli wprowadzone w formularzu dane (login,hasło) znajdują się już w intniejącej bazie.
+
+\subsection{Backlog Item 6}
+\paragraph{Tytuł zadania.} Lista egzaminów.
+\paragraph{Opis zadania.} Panel boczny zawierający listę egzaminów.
+\paragraph{Priorytet.} Wysoki.
+\paragraph{Definition of Done.} Panel znajdujący się po lewej stronie zawierający rozwijaną listę aktualnie dostępnych egzaminów.
+
+\subsection{Backlog Item 7}
+\paragraph{Tytuł zadania.} Panel konta użytkownika.
+\paragraph{Opis zadania.} Przegląd danych konta użytkownika oraz wyniki egzaminów .
+\paragraph{Priorytet.} Śrerdni.
+\paragraph{Definition of Done.} Użytkownik ma możliwość przeglądania danych wprowadzonych podczas rejestracji oraz zmiany niektórych z nich(adres email, hasło) , może przeglądać swoje wyniki z egzaminów .
+
+\subsection{Backlog Item 8}
+\paragraph{Tytuł zadania.} Przydzielanie egzaminów.
+\paragraph{Opis zadania.} Dobranie egzaminów przez administratora.
+\paragraph{Priorytet.} Niski
+\paragraph{Definition of Done.} Użytkownik z prawami administratora ma możliwość odblokowywania oraz blokowania dostępu do konkretnych egzaminów zalogowanemu użytkownikowi, ma dostęp także do wyników osiągniętych przez studenta.
+
+\subsection{Backlog Item 9}
+\paragraph{Tytuł zadania.} Zarządanie studentami.
+\paragraph{Opis zadania.} Przydzielanie studentów do wybranego roku, usuwanie.
+\paragraph{Priorytet.} Niski
+\paragraph{Definition of Done.} Użytkownik z prawami administratora ma możliwość przydzielenia studenta do wybranego roku, ma też możliwość usunięcia konta użytkownika .
+
+\subsection{Backlog Item 10}
+\paragraph{Tytuł zadania.} Serwer
+\paragraph{Opis zadania.} Utworzenie serwera, na którym działał będzie egzaminator
+\paragraph{Priorytet.} Wysoki
+\paragraph{Definition of Done.} Skrypt przełącza użytkownika na stronę wyboru egzaminów po wpisaniu poprawnych danych logowania. 
+
+\subsection*{Tutaj dodawać kolejne zadania}
+
+\section{Sprint 1} 
+\subsection{Cel} Przedstawienie projektu graficznego w wersji HTML
+\subsection{Sprint Planning/Backlog}
+
+\paragraph{Tytuł zadania.} Prototyp egzaminatora
+\begin{itemize}
+\item Estymata: M
+\end{itemize}
+
+\subsection{Realizacja}
+
+\paragraph{Tytuł zadania.} Prototyp egzaminatora
+\subparagraph{Wykonawca.} Paweł Tomasiak, Kamil Orzechowski
+\subparagraph{Realizacja.} Kamil Orzechowski - Wykonanie projektu graficznego w formie jpg.
+Paweł Tomasiak - Została utworzona strona logowania, która wymaga podania loginu i hasła; strona zawierająca rozwijaną listę egzaminów, z możliwością rozpoczęcia wybranego; stronę przedstawiającą wygląd rozpoczętego egzaminu, zawierająca licznik czasowy, panel wyboru pytań i okno z wybranym pytaniem wraz z odpowiedziami; strona wyświetlana po zakończeniu egzaminu zawierająca wynik; stron zawierająca panel administratora przedstawiający wyniki studentów.
+
+\subsection{Sprint Review/Demo}
+Założony cel sprintu został spełniony. Wszystkie założenia zostały osiągnięte w ustalonym czasie. Zrealizowany został prototyp zawierający strony:
+\begin{itemize}
+\item strona logowania
+\item lista egzaminów
+\item podgląd rozpoczętego egzaminu
+\item wynik egzaminu 
+\item panel administratora
+\end{itemize}
+
+Demonstracja została przeprowadzona dnia: 2017-11-22
+
+\section{Sprint 2}
+
+\subsection{Cel} Serwer, logowanie, weryfikacja, baza danych
+
+\subsection{Sprint Planning/Backlog}
+
+\paragraph{Tytuł zadania.} Serwer
+\begin{itemize}
+\item Estymata: L
+\end{itemize}
+
+\paragraph{Tytuł zadania.} Logowanie
+\begin{itemize}
+\item Estymata: S
+\end{itemize}
+
+\paragraph{Tytuł zadania.} Weryfikacja
+\begin{itemize}
+\item Estymata: M
+\end{itemize}
+
+\paragraph{Tytuł zadania.} Baza danych
+\begin{itemize}
+\item Estymata: L
+\end{itemize}
+
+\subsection{Realizacja}
+
+\paragraph{Tytuł zadania.} Serwer
+\subparagraph{Wykonawca.} Kamil Orzechowski
+\subparagraph{Realizacja.} Został założony lokalny serwer, wraz z usługami php i sql. Serwer korzysta z programu WAMPserver
+
+\paragraph{Tytuł zadania.} Logowanie
+\subparagraph{Wykonawca.} Paweł Tomasiak
+\subparagraph{Realizacja.} Projekt posiada działający system logowania dla użytkowników znajdujących się w bazie
+
+\paragraph{Tytuł zadania.} Weryfikacja
+\subparagraph{Wykonawca.} Paweł Tomasiak
+\subparagraph{Realizacja.} Skrypt na serwerze weryfikuje podane dane porównując je z wpisami z bazy sql
+
+
+\paragraph{Tytuł zadania.} Baza Danych
+\subparagraph{Wykonawca.} Przemysław Rysiewicz
+\subparagraph{Realizacja.} W bazie danych zostały utworzone tabele: kolokwia, users, dzialy, które posiadają następującą strukturę:
+
+\begin{verbatim}
+CREATE TABLE IF NOT EXISTS `kolokwia` (
+  `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id_dzialy` int(11) NOT NULL,
+  `name` varchar(30) COLLATE cp1250_polish_ci NOT NULL,
+  PRIMARY KEY (`id`)
+)
+  \end{verbatim}
+  
+  \begin{verbatim}
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `user` varchar(25) COLLATE cp1250_polish_ci NOT NULL,
+  `password` varchar(25) COLLATE cp1250_polish_ci DEFAULT NULL,
+  `name` varchar(35) COLLATE cp1250_polish_ci NOT NULL,
+  PRIMARY KEY (`id`)
+)
+  \end{verbatim}
+
+  \begin{verbatim}
+CREATE TABLE IF NOT EXISTS `dzialy` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) COLLATE cp1250_polish_ci NOT NULL,
+  PRIMARY KEY (`id`)
+)
+ \end{verbatim}
+ 
+\subsection{Sprint Review/Demo}
+Sprint został zakończony powodzeniem, wszystkie załozone zadania zostały zrealizowane w ustalonym czasie. 
+W ramach sprintu utwożyliśmy bazę danych, która zawiera kilku dodanych "na sztywno" użytkowników(z możliwością dodawania kolejnych - formularz rejestracji z poziomu egzaminatora nie jest jeszcze dostępny), dzięki czemu możliwe jest zalogowanie się. Logowanie odbywa w utworzonym w poprzednim sprincie formularzu, który do tej pory pełnił jedynie funkcję poglądową. Została stworzona weryfikacja danych wprowadzanych podczas logowania, która weryfikuje czy w bazie danych, w tabeli "users" znajduje się rekord zawierający wartości 'user' oraz 'password' zgodne z tymi wprowadzonymi w formularzu. W przypadku kiedy użytkownik  poda poprawne dane nastąpi przejście na stronę główną egzaminatora. Wyświetlane na niej są imie i nazwisko zalogowanej osoby. Użytkownik ma możliwość wylogowania się po którym następuje powrót do wcześniej wspomnianego formularza. Na chwile obecną po wpisaniu błędnego loginu lub hasła nie wyświetla się żaden komunikat(zostanie to dodane w kolejnym sprincie)
+
+\section{Sprint 3}
+
+\subsection{Cel}  Lista egzaminów oraz panel konta użytkownika.
+
+\subsection{Sprint Planning/Backlog}
+
+\paragraph{Tytuł zadania.} Lista egzaminów
+\begin{itemize}
+\item Estymata: M
+\end{itemize} 
+
+\paragraph{Tytuł zadania.} Panel konta użytkownika
+\begin{itemize}
+\item Estymata: L
+\end{itemize} 
+
+
+\subsection{Realizacja}
+
+\paragraph{Tytuł zadania.}  Lista egzaminów
+\subparagraph{Wykonawca.} Kamil Orzechowski.
+\subparagraph{Realizacja.} Po zalogowaniu, w sekcji MENU, znajduje się lista egzaminów możliwych do rozpoczęcia. Po wybraniu jednego z listy możliwe jest rozpoczęcie egzaminu
+
+\paragraph{Tytuł zadania.} Panel konta użytkownika.
+\subparagraph{Wykonawca.} Paweł Tomasiak.
+\subparagraph{Realizacja.} Został utworzony panel użytkownika zawierający wszystkie funkcje do jakich dostęp ma mieć użytwkownik nie będący administratorem. 
+ 
+\subsection{Sprint Review/Demo}
+Udało nam się spełnić założenia sprintu. Do egzaminatora
+
+\section{Sprint 4}
+
+\subsection{Cel} Przydzielanie egzaminów, zarządanie studentami, rejestracja. 
+
+\subsection{Sprint Planning/Backlog}
+
+\paragraph{Tytuł zadania.} Tytuł.
+\begin{itemize}
+\item Estymata: szacowana czasochłonność (w ,,koszulkach'').
+\end{itemize}
+
+\paragraph{Tytuł zadania.} Tytuł.
+\begin{itemize}
+\item Estymata: szacowana czasochłonność (w ,,koszulkach'').
+\end{itemize}
+
+\paragraph{Tutaj dodawać kolejne zadania}
+
+\subsection{Realizacja}
+
+\paragraph{Tytuł zadania.} Tytuł.
+\subparagraph{Wykonawca.} Wykonawca.
+\subparagraph{Realizacja.} Sprawozdanie z realizacji zadania (w tym ocena zgodności z estymatą). Kod programu (środowisko \texttt{verbatim}): \begin{verbatim}
+for (i=1; i<10; i++)
+...
+\end{verbatim}.
+
+\paragraph{Tytuł zadania.} Tytuł.
+\subparagraph{Wykonawca.} Wykonawca.
+\subparagraph{Realizacja.} Sprawozdanie z realizacji zadania (w tym ocena zgodności z estymatą). Kod programu (środowisko \texttt{verbatim}): \begin{verbatim}
+for (i=1; i<10; i++)
+...
+\end{verbatim}.
+
+\paragraph{Tutaj dodawać kolejne zadania}
+
+
+\subsection{Sprint Review/Demo}
+Sprawozdanie z przeglądu Sprint'u -- czy założony cel (przyrost) został osiągnięty oraz czy wszystkie zaplanowane Backlog Item'y zostały zrealizowane? Demostracja przyrostu produktu.
+
+
+\section*{Tutaj dodawać kolejne Sprint'y}
+
+
+\begin{thebibliography}{9}
+
+\bibitem{Cov} S. R. Covey, {\em 7 nawyków skutecznego działania}, Rebis, Poznań, 2007.
+
+\bibitem{Oet} Tobias Oetiker i wsp., Nie za krótkie wprowadzenie do systemu \LaTeX  \ $2_\varepsilon$, \url{ftp://ftp.gust.org.pl/TeX/info/lshort/polish/lshort2e.pdf}
+
+\bibitem{SchSut} K. Schwaber, J. Sutherland, {\em Scrum Guide}, \url{http://www.scrumguides.org/}, 2016.
+
+\bibitem{apr} \url{https://agilepainrelief.com/notesfromatooluser/tag/scrum-by-example}
+
+\bibitem{us} \url{https://www.tutorialspoint.com/scrum/scrum_user_stories.htm}
+
+\end{thebibliography}
+
+\end{document}
