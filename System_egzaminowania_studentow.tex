@@ -171,7 +171,7 @@ Jako wykładowca wymagam możliwości dodawania kont sudentów, tak abym mógł 
 \paragraph{Tytuł zadania.} Baza danych.
 \paragraph{Opis zadania.} Stworzenie struktur bazodanowych w środowisku MySQL.
 \paragraph{Priorytet.} Wysoki.
-\paragraph{Definition of Done.} Stworzenie bazy danych posiadającej w tabelach wartości takie jak: id, nazwa użytkownika, hasło, email, oceny.
+\paragraph{Definition of Done.} Stworzenie bazy danych posiadającej wymagane tabele. Wstępna wizja projektu zakłada utworzenie tabel takich jak: "użytkownicy" zawierająca informacje o utworzonych kontach użytkowników (Imię, nazwisko oraz login i  hasło); tabele "działy" oraz "kolokwia", przechowujące nazwy kolokwiów nazwy kolokwiów oraz nazwy działów do których kolokwia są przypisane; najobszerniejszej tabeli "pytania" zawierającej treści pytań egzaminów oraz odpowiedzi do nich; tabela "sesja" zawierająca informacje o przeprowadzonych egzaminach przez danego użytkownika.  
 
 \subsection{Backlog Item 3}
 \paragraph{Tytuł zadania.} Rejestracja.
@@ -189,7 +189,7 @@ Jako wykładowca wymagam możliwości dodawania kont sudentów, tak abym mógł 
 \paragraph{Tytuł zadania.} Logowanie.
 \paragraph{Opis zadania.} Umożliwienie zalogowania na istniejące konto.
 \paragraph{Priorytet.} Wysoki.
-\paragraph{Definition of Done.} Formularz logowania umożliwiający rozpoczęcie nowej sesji oraz dostęp do przeznaczonych dla niego egzaminów. Zalogowanie nastąpi jeśli wprowadzone w formularzu dane (login,hasło) znajdują się już w intniejącej bazie.
+\paragraph{Definition of Done.} Formularz logowania umożliwiający rozpoczęcie nowej sesji oraz dostęp do przeznaczonych dla niego egzaminów. Zalogowanie nastąpi jeśli wprowadzone w formularzu dane (login,hasło) znajdują się już w istniejącej bazie.
 
 \subsection{Backlog Item 6}
 \paragraph{Tytuł zadania.} Lista egzaminów.
@@ -264,7 +264,7 @@ Demonstracja została przeprowadzona dnia: 2017-11-22
 
 \paragraph{Tytuł zadania.} Logowanie
 \begin{itemize}
-\item Estymata: S
+\item Estymata: L
 \end{itemize}
 
 \paragraph{Tytuł zadania.} Weryfikacja
@@ -281,51 +281,79 @@ Demonstracja została przeprowadzona dnia: 2017-11-22
 
 \paragraph{Tytuł zadania.} Serwer
 \subparagraph{Wykonawca.} Kamil Orzechowski
-\subparagraph{Realizacja.} Został założony lokalny serwer, wraz z usługami php i sql. Serwer korzysta z programu WAMPserver
+\subparagraph{Realizacja.} Został założony lokalny serwer, wraz z usługami php i sql. Serwer korzysta z programu WAMPserver. Realizacja tego kroku wymagała tylko instalacji oprogramowania oraz podstawowej konfiguracji (tj. umieszczenie plików projektu w odpowiednim folderze). Obsługa lokalnego serwera jest prosta, więc przygotowanie serwera do działania wraz z instalacją zajęła kilkanaście minut.  
 
 \paragraph{Tytuł zadania.} Logowanie
 \subparagraph{Wykonawca.} Paweł Tomasiak
-\subparagraph{Realizacja.} Projekt posiada działający system logowania dla użytkowników znajdujących się w bazie
+\subparagraph{Realizacja.} Utworzony skrypt działa na bazie utworzonego w poprzednim sprincie formularza logowania. Po wpisaniu loginu oraz hasła za pomocą metody POST zostaje sprawdzona zgodność wpisanego loginu i hasła z informacjami w tabeli 'użytkownicy'. Logowanie obejmuje również działający przycisk wylogowania, który po użyciu uruchamia ponownie formularz logowania, uniemożliwiając dostęp do treści dla zalogowanych. Dzięki dobrej znajomości języka PHP przez naszych deweloperów skrypt został wykonany w trzy dni po ok. 1-1.5h pracy dziennie .
 
 \paragraph{Tytuł zadania.} Weryfikacja
 \subparagraph{Wykonawca.} Paweł Tomasiak
-\subparagraph{Realizacja.} Skrypt na serwerze weryfikuje podane dane porównując je z wpisami z bazy sql
+\subparagraph{Realizacja.} Skrypt na serwerze weryfikuje podane dane porównując je z wpisami z bazy sql. Po wprowadzeniu błędnych danych formularz logowania się resetuje oraz wyświetlony zostaje komunikat o błędnym loginie lub haśle. 
 
 
 \paragraph{Tytuł zadania.} Baza Danych
 \subparagraph{Wykonawca.} Przemysław Rysiewicz
-\subparagraph{Realizacja.} W bazie danych zostały utworzone tabele: kolokwia, users, dzialy, które posiadają następującą strukturę:
+\subparagraph{Realizacja.} Stworzona została baza danych posiadająca kilka tabel:  "użytkownicy" zawierająca informacje o utworzonych kontach użytkowników (Imię, nazwisko oraz login i  hasło); tabele "działy" oraz "kolokwia", przechowujące nazwy kolokwiów nazwy kolokwiów oraz nazwy działów do których kolokwia są przypisane; najobszerniejszej tabeli "pytania" zawierającej treści pytań egzaminów oraz odpowiedzi do nich; tabela "sesja" zawierająca informacje o przeprowadzonych egzaminach przez danego użytkownika. 
+W każdej z tabel znajdują się jakieś pozycje, które na chwilę obecną wprowadzone są "na sztywno" w środowisku sql przy użyciu polecenia \emph{INSERT INTO TABLE}. Baza mimo iż nie posiada skomplikowanej struktury i samo tworzenie jej nie było zbyt problematyczne wymagała przemyślenia przez co prace nad nią potrwały łącznie ok 3-4 dni po 1-2h dziennie. 
 
-\begin{verbatim}
-CREATE TABLE IF NOT EXISTS `kolokwia` (
-  `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_dzialy` int(11) NOT NULL,
-  `name` varchar(30) COLLATE cp1250_polish_ci NOT NULL,
-  PRIMARY KEY (`id`)
-)
-  \end{verbatim}
-  
-  \begin{verbatim}
-CREATE TABLE IF NOT EXISTS `users` (
-  `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `user` varchar(25) COLLATE cp1250_polish_ci NOT NULL,
-  `password` varchar(25) COLLATE cp1250_polish_ci DEFAULT NULL,
-  `name` varchar(35) COLLATE cp1250_polish_ci NOT NULL,
-  PRIMARY KEY (`id`)
-)
-  \end{verbatim}
 
-  \begin{verbatim}
-CREATE TABLE IF NOT EXISTS `dzialy` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(30) COLLATE cp1250_polish_ci NOT NULL,
-  PRIMARY KEY (`id`)
-)
- \end{verbatim}
- 
+	\vspace{0.5cm}
+	Tabela \textbf{uzytkownicy}:
+	\begin{itemize}
+		\item \textbf{id} $\to$ typu - \verb|INT(11)|, \verb|AUTO_INCREMENT|],
+		\item \textbf{user} $\to$ typu - \verb|VARCHAR(25)|, \verb|NOT NULL|,
+		\item \textbf{password} $\to$ typu - \verb|INT(25)|, \verb|DEFAULT NULL| 
+		\item \textbf{name} $\to$ typu - \verb|VARCHAR(35)|, \verb|NOT NULL| 
+	\end{itemize}
+	
+		\vspace{0.5cm}
+		Tabela \textbf{sessions}:
+		\begin{itemize}
+			\item \textbf{id} $\to$ typu - \verb|INT(11)|, \verb|AUTO_INCREMENT|,
+			\item \textbf{idUser} $\to$ typu - \verb|INT(11)|, \verb|NOT NULL|,
+			\item \textbf{nazwaSesji} $\to$ typu - \verb|INT(11)|, \verb|NOT NULL| 
+			\item \textbf{idDzialu} $\to$ typu - \verb|INT(11)|, \verb|NOT NULL| 
+			\item \textbf{idKolokwium} $\to$ typu - \verb|INT(11)|, \verb|NOT NULL|,
+			\item \textbf{pytania} $\to$  \verb|text COLLATE cp1250_polish_ci|, \verb|NOT NULL|,
+			\item \textbf{odpowiedzi} $\to$  \verb|text COLLATE cp1250_polish_ci|, \verb|NOT NULL|,
+			\item \textbf{poprawne} $\to$  \verb|text COLLATE cp1250_polish_ci|, \verb|NOT NULL|,
+			\item \textbf{czas} $\to$  \verb|INT(11)|, \verb|NOT NULL| 
+			\item \textbf{ocena} $\to$ typu - \verb|INT(11)|, \verb|NOT NULL| 
+		\end{itemize}
+		
+				\vspace{0.5cm}
+				Tabela \textbf{pytania}:
+				\begin{itemize}
+					\item \textbf{id} $\to$ typu - \verb|INT(11)|,\verb|NOT NULL|, \verb|AUTO_INCREMENT|,
+					\item \textbf{idDzialu} $\to$ typu - \verb|INT(11)|, \verb|NOT NULL| 
+					\item \textbf{idKolokwium} $\to$ typu - \verb|INT(11)|, \verb|NOT NULL|,
+					\item \textbf{pytanie} $\to$  \verb|text COLLATE cp1250_polish_ci|, \verb|NOT NULL|,
+					\item \textbf{odp1} $\to$  \verb|text COLLATE cp1250_polish_ci|, \verb|NOT NULL|,
+					\item \textbf{odp2} $\to$  \verb|text COLLATE cp1250_polish_ci|, \verb|NOT NULL|,
+					\item \textbf{odp3} $\to$  \verb|text COLLATE cp1250_polish_ci|, \verb|NOT NULL|,
+					\item \textbf{odp4} $\to$  \verb|text COLLATE cp1250_polish_ci|, \verb|NOT NULL|,
+					\item \textbf{poprawne} $\to$  \verb|INT(11)|, \verb|NOT NULL|,
+				\end{itemize}
+				
+				\vspace{0.5cm}
+				Tabela \textbf{kolokwia}:
+				\begin{itemize}
+					\item \textbf{id} $\to$ typu - \verb|INT(11)|,\verb|unsigned NOT NULL|, \verb|AUTO_INCREMENT|,
+					\item \textbf{idDzialy} $\to$ typu - \verb|INT(11)|, \verb|NOT NULL|,
+					\item \textbf{name} $\to$ typu - \verb|VARCHAR(30)|,\verb|text COLLATE cp1250_polish_ci|, \verb|NOT NULL| 
+					\end{itemize}				
+					
+				\vspace{0.5cm}
+				Tabela \textbf{kolokwia}:
+				\begin{itemize}
+					\item \textbf{id} $\to$ typu - \verb|INT(11)|,\verb|unsigned NOT NULL|, \verb|AUTO_INCREMENT|,
+					\item \textbf{name} $\to$ typu - \verb|VARCHAR(30)|,\verb|text COLLATE cp1250_polish_ci|, \verb|NOT NULL| 
+					\end{itemize}									
+		
+		 
 \subsection{Sprint Review/Demo}
-Sprint został zakończony powodzeniem, wszystkie załozone zadania zostały zrealizowane w ustalonym czasie. 
-W ramach sprintu utwożyliśmy bazę danych, która zawiera kilku dodanych "na sztywno" użytkowników(z możliwością dodawania kolejnych - formularz rejestracji z poziomu egzaminatora nie jest jeszcze dostępny), dzięki czemu możliwe jest zalogowanie się. Logowanie odbywa w utworzonym w poprzednim sprincie formularzu, który do tej pory pełnił jedynie funkcję poglądową. Została stworzona weryfikacja danych wprowadzanych podczas logowania, która weryfikuje czy w bazie danych, w tabeli "users" znajduje się rekord zawierający wartości 'user' oraz 'password' zgodne z tymi wprowadzonymi w formularzu. W przypadku kiedy użytkownik  poda poprawne dane nastąpi przejście na stronę główną egzaminatora. Wyświetlane na niej są imie i nazwisko zalogowanej osoby. Użytkownik ma możliwość wylogowania się po którym następuje powrót do wcześniej wspomnianego formularza. Na chwile obecną po wpisaniu błędnego loginu lub hasła nie wyświetla się żaden komunikat(zostanie to dodane w kolejnym sprincie)
+Sprint został zakończony powodzeniem, wszystkie główne założone zadania zostały zrealizowane w ustalonym czasie.  Demo zostało zaprezentowane 13 grudnia. Czas przeznaczony na wykonanie to 3 tygodnie. W ramach sprintu utworzyliśmy bazę danych, która zawiera kilku dodanych "na sztywno" użytkowników(z możliwością dodawania kolejnych - formularz rejestracji z poziomu egzaminatora nie jest jeszcze dostępny), dzięki czemu możliwe jest zalogowanie się. Logowanie odbywa w utworzonym w poprzednim sprincie formularzu, który do tej pory pełnił jedynie funkcję poglądową. Została stworzona weryfikacja danych wprowadzanych podczas logowania, która weryfikuje czy w bazie danych, w tabeli "users" znajduje się rekord zawierający wartości 'user' oraz 'password' zgodne z tymi wprowadzonymi w formularzu. W przypadku kiedy użytkownik  poda poprawne dane nastąpi przejście na stronę główną egzaminatora. Wyświetlane na niej są imie i nazwisko zalogowanej osoby. Użytkownik ma możliwość wylogowania się po którym następuje powrót do wcześniej wspomnianego formularza. Na chwile obecną po wpisaniu błędnego loginu lub hasła nie wyświetla się żaden komunikat(zostanie to dodane w kolejnym sprincie)
 
 \section{Sprint 3}
 
@@ -335,7 +363,7 @@ W ramach sprintu utwożyliśmy bazę danych, która zawiera kilku dodanych "na s
 
 \paragraph{Tytuł zadania.} Lista egzaminów
 \begin{itemize}
-\item Estymata: M
+\item Estymata: XL
 \end{itemize} 
 
 \paragraph{Tytuł zadania.} Panel konta użytkownika
@@ -348,14 +376,14 @@ W ramach sprintu utwożyliśmy bazę danych, która zawiera kilku dodanych "na s
 
 \paragraph{Tytuł zadania.}  Lista egzaminów
 \subparagraph{Wykonawca.} Kamil Orzechowski.
-\subparagraph{Realizacja.} Po zalogowaniu, w sekcji MENU, znajduje się lista egzaminów możliwych do rozpoczęcia. Po wybraniu jednego z listy możliwe jest rozpoczęcie egzaminu
+\subparagraph{Realizacja.} Po zalogowaniu, w sekcji MENU, znajduje się lista egzaminów możliwych do rozpoczęcia. Po wybraniu jednego z listy możliwe jest rozpoczęcie egzaminu. Sekcja została podzielona na 2 kategorie: 'dzialy' oraz 'kolokwia'. Ma to na celu umożliwić grupowanie tematycznie egzaminów w finalnej wersji Egzaminatora. Menu wykonane z użyciem JavaScript działa jako lista rozwijana, po kliknięciu na interesujący nas dział wyświetlają się dostępne dla nas kolokwia. W tym zadaniu zostało dodane działające już w pełni wypełnianie egzaminu. Po wybraniu konkretnego egzaminu wyświetla się przycisk wraz z nazwą wybranego kolokwium umożliwiający rozpoczęcie. Po kliknięciu na przycisk zostajemy przeniesieni do strony egzaminowania.  Został utworzony panel zawierający zegar odliczający do końca oraz panel wyboru pytania. Do każdego pytania zostały dodane 4 odpowiedzi z czego 1 jest poprawna. Dodaliśmy 2 możliwości zmiany pytania: jedna umożliwia przejście o jedno dalej, druga natomiast pozwala przechodzenie z dowolnego do dowolnego. Dodaliśmy również licznik zdobytych punktów wyświetlający się po zakończeniu (zakończenie może nastąpić po upływie czasu lub po wciśnięciu przycisku). Informacje danej sesji przechowywane są w bazie danych w tabeli 'session'. Jako, iż jest to główne założenie, najważniejsze zadanie naszego całego projektu poświęciliśmy mu najwięcej czasu. 
 
 \paragraph{Tytuł zadania.} Panel konta użytkownika.
 \subparagraph{Wykonawca.} Paweł Tomasiak.
-\subparagraph{Realizacja.} Został utworzony panel użytkownika zawierający wszystkie funkcje do jakich dostęp ma mieć użytwkownik nie będący administratorem. 
+\subparagraph{Realizacja.} Został utworzony panel użytkownika zawierający wszystkie funkcje do jakich dostęp ma mieć użytkownik nie będący administratorem, . Przez "Panel konta użytkownika" w naszym projekcie rozumiemy wszystko do czego uzyskujemy dostęp po zalogowaniu min. wspomniana wcześniej Lista Egzaminów 
  
 \subsection{Sprint Review/Demo}
-Udało nam się spełnić założenia sprintu. Do egzaminatora
+Udało nam się spełnić główne założenia, sprint został przyjęty. Demo odbyło się 10 stycznia. Podczas trwania prezentacji doszliśmy do wniosków, iż warto usprawnić min. Listę Egzaminów o kilka opcjonalnych elementów, takich jak zablokowanie możliwości wielokrotnego uzupełniania jednego egzaminu oraz sposobu  ich wyświetlania w menu (na chwile obecną wyswietlają się wszystkie jednak powinny się wyświetlać te, które muszę w danej chwili uzupełnić) .  Został dodany komunikat informujący o błędnym loginie lub haśle podanym podczas logowania, który miał się znaleźć w poprzednim sprincie jednak został wtedy pominięty. 
 
 \section{Sprint 4}
 
@@ -416,3 +444,5 @@ Sprawozdanie z przeglądu Sprint'u -- czy założony cel (przyrost) został osi�
 \end{thebibliography}
 
 \end{document}
+
+
