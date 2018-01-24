@@ -145,7 +145,7 @@ Jako wykładowca wymagam możliwości dodawania kont sudentów, tak abym mógł 
 \item  Data zakończenia: 2018-01-10.
 \item Scrum Master: Paweł Tomasiak
 \item Product Owner: Kamil Orzechowski
-\item Development Team:
+\item Development Team: Paweł Tomasiak, Przemysław Rysiewicz, Kamil Orzechowski.
 \end{itemize}
 
 \subsection{Sprint 4}
@@ -155,7 +155,7 @@ Jako wykładowca wymagam możliwości dodawania kont sudentów, tak abym mógł 
 \item  Data zakończenia: 2018-01-24.
 \item Scrum Master: Przemysław Rysiewicz
 \item Product Owner: Paweł Tomasiak
-\item Development Team:
+\item Development Team: Kamil Orzechowski, Przemysław Rysiewicz
 \end{itemize}
 
 
@@ -177,7 +177,7 @@ Jako wykładowca wymagam możliwości dodawania kont sudentów, tak abym mógł 
 \paragraph{Tytuł zadania.} Rejestracja.
 \paragraph{Opis zadania.} Możliwość utowrzenia nowego konta.
 \paragraph{Priorytet.} Średni.
-\paragraph{Definition of Done.} Stworzenie formularza umożliwiającego każdemu założenie nowego konta. Pomyślna rejestracja utworzy nowy rekord w bazie danych.
+\paragraph{Definition of Done.} Stworzenie formularza umożliwiającego założenie nowego konta użytkownika. Pomyślna rejestracja utworzy nowy rekord w bazie danych.
 
 \subsection{Backlog Item 4}
 \paragraph{Tytuł zadania.} Weryfikacja.
@@ -207,13 +207,13 @@ Jako wykładowca wymagam możliwości dodawania kont sudentów, tak abym mógł 
 \paragraph{Tytuł zadania.} Przydzielanie egzaminów.
 \paragraph{Opis zadania.} Dobranie egzaminów przez administratora.
 \paragraph{Priorytet.} Niski
-\paragraph{Definition of Done.} Użytkownik z prawami administratora ma możliwość odblokowywania oraz blokowania dostępu do konkretnych egzaminów zalogowanemu użytkownikowi, ma dostęp także do wyników osiągniętych przez studenta.
+\paragraph{Definition of Done.} Użytkownik z prawami administratora ma możliwość dodawania nowych pytań do utworzonych wcześniej działów, do których dostęp ma później użytkownik - student.
 
 \subsection{Backlog Item 9}
 \paragraph{Tytuł zadania.} Zarządanie studentami.
 \paragraph{Opis zadania.} Przydzielanie studentów do wybranego roku, usuwanie.
 \paragraph{Priorytet.} Niski
-\paragraph{Definition of Done.} Użytkownik z prawami administratora ma możliwość przydzielenia studenta do wybranego roku, ma też możliwość usunięcia konta użytkownika .
+\paragraph{Definition of Done.} Poprzez zarządzanie studentami rozumiemy możliwość wyświetlania wyników osiągniętych przez studentów podczas egzaminów.
 
 \subsection{Backlog Item 10}
 \paragraph{Tytuł zadania.} Serwer
@@ -375,7 +375,7 @@ Sprint został zakończony powodzeniem, wszystkie główne założone zadania zo
 \subsection{Realizacja}
 
 \paragraph{Tytuł zadania.}  Lista egzaminów
-\subparagraph{Wykonawca.} Kamil Orzechowski.
+\subparagraph{Wykonawca.} Kamil Orzechowski, Przemywsław Rysiewicz.
 \subparagraph{Realizacja.} Po zalogowaniu, w sekcji MENU, znajduje się lista egzaminów możliwych do rozpoczęcia. Po wybraniu jednego z listy możliwe jest rozpoczęcie egzaminu. Sekcja została podzielona na 2 kategorie: 'dzialy' oraz 'kolokwia'. Ma to na celu umożliwić grupowanie tematycznie egzaminów w finalnej wersji Egzaminatora. Menu wykonane z użyciem JavaScript działa jako lista rozwijana, po kliknięciu na interesujący nas dział wyświetlają się dostępne dla nas kolokwia. W tym zadaniu zostało dodane działające już w pełni wypełnianie egzaminu. Po wybraniu konkretnego egzaminu wyświetla się przycisk wraz z nazwą wybranego kolokwium umożliwiający rozpoczęcie. Po kliknięciu na przycisk zostajemy przeniesieni do strony egzaminowania.  Został utworzony panel zawierający zegar odliczający do końca oraz panel wyboru pytania. Do każdego pytania zostały dodane 4 odpowiedzi z czego 1 jest poprawna. Dodaliśmy 2 możliwości zmiany pytania: jedna umożliwia przejście o jedno dalej, druga natomiast pozwala przechodzenie z dowolnego do dowolnego. Dodaliśmy również licznik zdobytych punktów wyświetlający się po zakończeniu (zakończenie może nastąpić po upływie czasu lub po wciśnięciu przycisku). Informacje danej sesji przechowywane są w bazie danych w tabeli 'session'. Jako, iż jest to główne założenie, najważniejsze zadanie naszego całego projektu poświęciliśmy mu najwięcej czasu. 
 
 \paragraph{Tytuł zadania.} Panel konta użytkownika.
@@ -394,38 +394,36 @@ Udało nam się spełnić główne założenia, sprint został przyjęty. Demo o
 \paragraph{Tytuł zadania.} Przydzielanie egzaminów.
 \begin{itemize}
 \item Estymata: M
-\end{itemize}
+\end{itemize} 
 
 \paragraph{Tytuł zadania.} Zarządanie studentami.
 \begin{itemize}
 \item Estymata: M
-\end{itemize}
+\end{itemize} 
 
 \paragraph{Tytuł zadania.} Rejestracja.
 \begin{itemize}
 \item Estymata: L
-\end{itemize}
+\end{itemize} 
 
 \paragraph{Tutaj dodawać kolejne zadania}
 
 \subsection{Realizacja}
 
 \paragraph{Tytuł zadania.} Przydzielanie egzaminów.
-\subparagraph{Wykonawca.} Wykonawca.
-\subparagraph{Realizacja.} 
+\subparagraph{Wykonawca.} Kamil Orzechowski
+\subparagraph{Realizacja.} Została utworzona nowa podstrona dostępna tylko dla administratora (wszystkie dzisiejsze zadania oparte są na tej podstronie) Przez przydzielanie studentów rozumiemy możliwość dodawania nowych pytań do wybranego działu, z możliwością dodania 4 pytań i oznaczenia jednej poprawnej. Zadanie to okazało się najtrudniejsze 
 
 \paragraph{Tytuł zadania.} Zarządanie studentami.
-\subparagraph{Wykonawca.} Wykonawca.
-\subparagraph{Realizacja.} 
+\subparagraph{Wykonawca.} Przemek Rysiewicz
+\subparagraph{Realizacja.} Ponownie jest to zakładka, która zgodnie z naszym zamiarem dostępna jest tylko dla administratora. Pozwala na wyświetlenie wyników z egzaminów uzupełnionych przez studentów. Wyświetlane informacje są w postaci tabeli, która zawiera dane studenta, ocenę oraz datę wykonania testu. Z racji, iż jest to głównie wyświetlanie informacji zawartych w tabeli w bazie danych zadanie to nie sprawiło nam większych problemów, wykonanie zajęło około 2 dni po 1-2h pracy dziennie.
 
 \paragraph{Tytuł zadania.} Rejestracja.
-\subparagraph{Wykonawca.} Wykonawca.
-\subparagraph{Realizacja.} 
+\subparagraph{Wykonawca.} Przemysław Rysiewicz, Kamil Orzechowski
+\subparagraph{Realizacja.} To zadanie podobnie jak dwa poprzednie zrealizowane jest na bazie podstrony dostępnej dla administratora (admin.php). Zgodznie z naszym założeniem tworzeniem nowych kont użytkowników zajmuje się administrator, zwykły użytkownik nie ma możliwości rejestracji. Do tego wykonania tego zadania przystąpiły dwie osoby co przyczyniło się do szybkiego postępu pracy.  Wykonanie zadania zajęło 3 dni po ok. 2h pracy dziennie.
 
 \subsection{Sprint Review/Demo}
 Ostatnia zaplanowana prezentacja postępów odbędzie się dnia 24 stycznia. Zostanie na nim zaprezentowana finalna wersja egzaminatora. 
-
-
 
 
 
